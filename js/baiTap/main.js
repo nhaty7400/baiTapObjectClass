@@ -4,12 +4,10 @@ const validation = new Validation();
 //initialization
 function setLocalStorage() {
     localStorage.setItem("DSNV", JSON.stringify(dsnv.mangNV));
-    // console.log(data);
 }
 
 function getLocalStorage() {
     var dataLocal = JSON.parse(localStorage.getItem("DSNV"));
-    console.log(dataLocal);
     if (dataLocal !== null) {
         hienThiTable(dataLocal);
         dsnv.mangNV = dataLocal;
@@ -75,7 +73,6 @@ function hienThiTable(mang) {
     </tr>`;
         content += trNV;
     })
-    // console.log(content);
     document.getElementById("tableDanhSach").innerHTML = content;
 }
 

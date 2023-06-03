@@ -86,7 +86,7 @@ function Validation() {
 
     this.checkPassword = function (value, spanID, message) {
         var pattern = /((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{6,10})/g;
-        if (value.match(pattern)) {
+        if (value.match(pattern)&&value.length>=6&&value.length<=10) {
             //? hợp lệ
             document.getElementById(spanID).innerHTML = "";
             document.getElementById(spanID).style.display = "none";
